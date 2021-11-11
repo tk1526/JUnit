@@ -1,4 +1,4 @@
-package edu.augustana.csc285.labs;
+package edu.augustana.csc305.labs;
 
 public class StringUtils {
 

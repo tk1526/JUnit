@@ -1,4 +1,4 @@
-package edu.augustana.csc285.labs;
+package edu.augustana.csc305.labs;
 
 // Supervisor's note: Here's the smelly code that Hannaldous left us...
 //

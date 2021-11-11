@@ -1,9 +1,9 @@
-package edu.augustana.csc285.labs;
+package edu.augustana.csc305.labs;
 
+import static edu.augustana.csc305.labs.NumberUtils.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
-import static edu.augustana.csc285.labs.NumberUtils.*;
 
 
 class NumberUtilsTest {
