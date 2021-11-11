@@ -22,39 +22,28 @@ package edu.augustana.csc305.labs;
 
 public class Hannaldous {
 	
-	// method one to do the thing for Monday's meeting 
-	public static int howbad(int n, String[] x, double roXORZ) {
+	public static int lengthRequirement(int minAmount, String[] x) {
 		int j = x.length - 1;
-		int ret = 0;
-		n = n; // n = ? 
-		for (int i = 0; i < x.length; i = i + 1) 
-		{
-		if (x[j].length() < n || Help(x[j]).equals("y"))
-			ret++;
-	j--;  }
-		return ret;
-						}
-	// method two helps, and i wrote it at 11:58 p.m. on sunday... 
-	// couldn't find it on stack overflow, so I rolled my pwn. 
-	static String Help(String MAYBE) 
-	{		
-		int yeah = -1;
-		while (yeah++ < MAYBE.length() - 1) {
-			char izard /*PoKeMoN babee*/ = MAYBE.charAt(yeah); 
-			
-			if (! (izard >= 'a' && izard <='z'|| izard >='A' && izard <= 'Z')) return "n"; }
+		int rating = 0;
+		for (int i = 0; i < x.length; i = i + 1) {
+			if (x[j].length() < minAmount || Help(x[j]).equals("y"))
+				rating++;
+			j--;
+		}
+		return rating;
+	}
+	
+	static String Help(String passedString) {
+		int count = -1;
+		while (count++ < passedString.length() - 1) {
+			char currChar = passedString.charAt(count);
+
+			if (!(currChar >= 'a' && currChar <= 'z' || currChar >= 'A' && currChar <= 'Z'))
+				return "n";
+		}
 		return "y";
 	}
 	
-	
-	public static void main(String[] args) {
-		
-		System.out.println(Help("bigmoose$"));
-		System.out.println(Help("emusareawesome"));
-		System.out.println(Help("17"));
 
-		String[] passwords = new String[] { "bigmoose$", "emusareawesome", "123goodbye", "ok&y", "17", "cat" };
-		System.out.println(howbad(8,passwords, 0.0));
-	}
 
 }
